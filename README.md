@@ -5,7 +5,7 @@ We trained StyleGAN2-ADA (which is supported by StyleGAN3 GitHub) on syndromic f
 
 
 
-## Dataset and paper draft will be available soon
+## Instruction, dataset and paper draft will be available soon
 
 
 ## Below is the original description from Nvidia StyleGAN3
