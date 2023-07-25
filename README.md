@@ -1,3 +1,15 @@
+
+## StyleGAN2-ADA on syndromic faces 
+
+We trained StyleGAN2-ADA (which is supported by StyleGAN3 GitHub) on syndromic faces. The main advantages of StyleGAN3 over StyleGAN2 are rotation and translation manipulation. Since neither of these operations are pertained to our objective, we decided to use StyleGAN2-ADA instead of StyleGAN3. 
+
+
+
+## Dataset and paper draft will be available soon
+
+
+## Below is the original description from Nvidia StyleGAN3
+
 ## Alias-Free Generative Adversarial Networks (StyleGAN3)<br><sub>Official PyTorch implementation of the NeurIPS 2021 paper</sub>
 
 ![Teaser image](./docs/stylegan3-teaser-1920x1006.png)
