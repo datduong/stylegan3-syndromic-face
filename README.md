@@ -1,11 +1,25 @@
 
 ## StyleGAN2-ADA on syndromic faces 
 
-We trained Nvidia StyleGAN2-ADA (which is supported by StyleGAN3 GitHub, see below) on syndromic faces. The main advantages of StyleGAN3 over StyleGAN2 are rotation and translation manipulations. Since neither of these operations are pertained to our objective, we decided to use StyleGAN2-ADA instead of StyleGAN3. 
+We trained Nvidia StyleGAN2-ADA (which is supported by StyleGAN3 GitHub, see their original instruction below) on syndromic faces. The main advantages of StyleGAN3 over StyleGAN2 are rotation and translation manipulations. Since neither of these operations are pertained to our objective, we decided to use StyleGAN2-ADA instead of StyleGAN3. 
 
+## Surveys sent to medical students
+
+We measure the effectiveness of GAN images and GAN-transformation at helping medical students recognizing Kabuki and Noonan syndromes. The survey sent out are:
+
+- [Kabuki test images with only text description of the disease](https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:4e845dd6-431f-4da4-8ded-0edadfd4cf6a)
+- [Kabuki test images with text description and 5 real images of the disease](https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:94d8c31c-1033-46fb-8317-27636b0b959f)
+- [Kabuki test images with text description and 5 GAN images of the disease](https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:2c115c4b-b085-411d-a481-7834654963ef)
+- [Kabuki test images with text description and 5 GAN-transformation examples of the disease](https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:a3359e4a-367c-4921-8ce3-84174ce3b9d2)
+
+- [Noonan test images with only text description of the disease]( https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:cc6aab81-d9b5-494c-86ba-87bb0128cd5d)
+- [Noonan test images with text description and 5 real images of the disease]( https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:dd3561ae-42a8-4fd6-bac4-99a34e143183)
+- [Noonan test images with text description and 5 GAN images of the disease]( https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:0af0d297-b172-422c-9e02-5c599a41be65)
+- [Noonan test images with text description and 5 GAN-transformation examples of the disease]( https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:d15defb9-b023-4723-978e-4ec0939e96c7)
 
 
 ## Instruction, dataset and paper draft will be available soon
+
 
 
 ## Below is the original description from Nvidia StyleGAN3
