@@ -1,6 +1,8 @@
 
 ## StyleGAN2-ADA on syndromic faces 
 
+For more detail, please see our paper [**Generative Artificial Intelligence Methods for Pediatric Genetics Education**](https://www.medrxiv.org/content/10.1101/2023.08.01.23293506v1).
+
 We trained Nvidia StyleGAN2-ADA (which is supported by StyleGAN3 GitHub, see their original instruction below) on syndromic faces. The main advantages of StyleGAN3 over StyleGAN2 are rotation and translation manipulations. Since neither of these operations are pertained to our objective, we decided to use StyleGAN2-ADA instead of StyleGAN3. 
 
 ## Surveys sent to medical students
@@ -18,7 +20,7 @@ We measure the effectiveness of GAN images and GAN-transformation at helping med
 - [Noonan test images with text description and 5 GAN-transformation examples of the disease]( https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:d15defb9-b023-4723-978e-4ec0939e96c7)
 
 
-## Instruction, dataset and paper draft will be available soon
+## Instruction and dataset will be available soon
 
 
 
