@@ -16,7 +16,7 @@ module load gcc/8.3.0
 
 
 # sbatch --partition=gpu --time=2-00:00:00 --gres=gpu:v100x:2 --mem=24g --cpus-per-task=24 
-# sbatch --partition=gpu --time=2:30:00 --gres=gpu:p100:1 --mem=8g --cpus-per-task=8 
+# sbatch --partition=gpu --time=14:30:00 --gres=gpu:p100:1 --mem=8g --cpus-per-task=8 
 # sinteractive --time=1:30:00 --gres=gpu:p100:1 --mem=4g --cpus-per-task=4
 
 
@@ -26,7 +26,7 @@ module load gcc/8.3.0
 # headfolder=/data/duongdb/ManyFaceConditions12012022
 # outfolder_name=$headfolder/TrimImg # ! all images will be in same folder, we need to run the @extract_code 
 # mkdir $outfolder_name
-# codepath=/data/duongdb/stylegan3-FaceSyndromes/FaceSyndromes/ManySyndromes # ! 
+# codepath=/data/duongdb/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
 # cd $codepath
 # for type in 22q11DS BWS CdLS Down KS NS PWS RSTS1 WHS Unaffected WS  
 # do 
@@ -40,13 +40,13 @@ module load gcc/8.3.0
 
 resolution=720
 
-codepath=/data/duongdb/stylegan3-FaceSyndromes/FaceSyndromes/ManySyndromes # ! 
+codepath=/data/duongdb/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 
 headfolder=/data/duongdb/ManyFaceConditions12012022
 img_path=$headfolder/TrimImg
 
-colorcode=255
+colorcode=0
 
 foutpath=$headfolder/TrimImg_no_bg_$colorcode'pix'_$resolution'rs'
 foutpath2=$foutpath'_align'

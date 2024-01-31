@@ -26,7 +26,7 @@ module load gcc/8.3.0
 headfolder=/data/duongdb/FaceExpression08312022
 outfolder_name=$headfolder/TrimImg # ! all images will be in same folder, we need to run the @extract_code 
 mkdir $outfolder_name
-codepath=/data/duongdb/stylegan3-FaceSyndromes/FaceSyndromes/ManySyndromes # ! 
+codepath=/data/duongdb/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 for type in Angelman
 do 
@@ -40,7 +40,7 @@ cd $outfolder_name
 
 resolution=720
 
-codepath=/data/duongdb/stylegan3-FaceSyndromes/FaceSyndromes/ManySyndromes # ! 
+codepath=/data/duongdb/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 
 headfolder=/data/duongdb/FaceExpression08312022

@@ -67,7 +67,8 @@ for f in tqdm ( imagelist ) :
   # check if file exists. 
   if args.skip_exist and os.path.exists(dest_file): 
     continue
-    
+
+  # ! follow https://github.com/RameenAbdal/StyleFlow/issues/14#issuecomment-765644589
   if args.verbose: # images can fail if it's too different from standard faces. ??? whatttt....
     print('align face '+f)
     Align_face_image(os.path.join(args.input_file_path,f), output_size=args.output_size, transform_size=args.transform_size, enable_padding=args.enable_padding, dest_file=dest_file, notblur=args.notblur, centerface=args.centerface, whitebackground=args.whitebackground)

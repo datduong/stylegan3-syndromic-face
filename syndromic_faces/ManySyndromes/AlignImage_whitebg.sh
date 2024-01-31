@@ -26,7 +26,7 @@ module load gcc/8.3.0
 # headfolder=/data/duongdb/ManyFaceConditions12012022
 # outfolder_name=$headfolder/TrimImg # ! all images will be in same folder, we need to run the @extract_code 
 # mkdir $outfolder_name
-# codepath=/data/duongdb/stylegan3-FaceSyndromes/FaceSyndromes/ManySyndromes # ! 
+# codepath=/data/duongdb/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
 # cd $codepath
 # for type in 22q11DS BWS CdLS Down KS NS PWS RSTS1 WHS Unaffected WS  
 # do 
@@ -41,7 +41,7 @@ module load gcc/8.3.0
 
 resolution=512
 
-codepath=/data/duongdb/stylegan3-FaceSyndromes/FaceSyndromes/ManySyndromes # ! 
+codepath=/data/duongdb/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 
 headfolder=/data/duongdb/ManyFaceConditions12012022
@@ -71,7 +71,7 @@ python3 AlignImage.py --input_file_path $img_path --output_file_path $foutpath -
 
 # ! take some random images just for the sake of trying 
 
-codepath=/data/duongdb/stylegan3-FaceSyndromes/FaceSyndromes/ManySyndromes # ! 
+codepath=/data/duongdb/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 
 headfolder=/data/duongdb/ManyFaceConditions12012022
@@ -104,7 +104,7 @@ python3 AlignImage.py --input_file_path $img_path --output_file_path $foutpath -
 headfolder=/data/duongdb/ManyFaceConditions05251222
 outfolder_name=$headfolder/SurveyPics_5_26_2022TrimImg # ! all images will be in same folder, we need to run the @extract_code 
 mkdir $outfolder_name
-codepath=/data/duongdb/stylegan3-FaceSyndromes/FaceSyndromes/ManySyndromes # ! 
+codepath=/data/duongdb/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 
 datapath=$headfolder/SurveyPics_5_26_2022
@@ -114,7 +114,7 @@ cd $outfolder_name
 
 
 
-codepath=/data/duongdb/stylegan3-FaceSyndromes/FaceSyndromes/ManySyndromes # ! 
+codepath=/data/duongdb/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 
 headfolder=/data/duongdb/ManyFaceConditions05251222
