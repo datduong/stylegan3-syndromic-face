@@ -85,13 +85,13 @@ def make_transform(translate: Tuple[float,float], angle: float):
 @click.option('--network', 'network_pkl', help='Network pickle filename', required=True)
 @click.option('--seeds', type=parse_range, help='List of random seeds (e.g., \'0,1,4-6\')', required=True)
 @click.option('--trunc', 'truncation_psi', type=float, help='Truncation psi', default=1, show_default=True)
-@click.option('--class', 'class_idx', type=str, help='Class label (unconditional if not specified)')
+@click.option('--label', 'class_idx', type=str, help='Class label (unconditional if not specified)')
 @click.option('--noise-mode', help='Noise mode', type=click.Choice(['const', 'random', 'none']), default='const', show_default=True)
 @click.option('--translate', help='Translate XY-coordinate (e.g. \'0.3,1\')', type=parse_vec2, default='0,0', show_default=True, metavar='VEC2')
 @click.option('--rotate', help='Rotation angle in degrees', type=float, default=0, show_default=True, metavar='ANGLE')
 @click.option('--outdir', help='Where to save the output images', type=str, required=True, metavar='DIR')
 # ! extra args
-@click.option('--class-next', 'class_idx_next', type=str)
+@click.option('--morph-to-this-label', 'class_idx_next', type=str)
 @click.option('--mix-ratio', 'mix_ratio', type=float)
 @click.option('--prefix-dict', 'prefix_dict', type=parse_dict)
 
@@ -135,7 +135,7 @@ def generate_images(
     label = torch.zeros([1, G.c_dim], device=device)
     if G.c_dim != 0:
         if class_idx is None:
-            raise click.ClickException('Must specify class label with --class when using a conditional network')
+            raise click.ClickException('Must specify class label with --label when using a conditional network')
         
         class_idx = [int(s.strip()) for s in class_idx.split(',')]
         label[:, class_idx] = 1
@@ -150,7 +150,7 @@ def generate_images(
             
     else:
         if class_idx is not None:
-            print ('warn: --class=lbl ignored when running on an unconditional network')
+            print ('warn: --label=lbl ignored when running on an unconditional network')
 
     print ('see label', label)
     if prefix_dict is not None: 

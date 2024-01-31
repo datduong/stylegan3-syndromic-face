@@ -137,7 +137,7 @@ def parse_class(G, class_idx: int, ctx: click.Context) -> Union[int, type(None)]
         return None
     # Conditional model, so class must be specified by user
     if class_idx is None:
-        ctx.fail('Must specify class label with --class when using a conditional network!')
+        ctx.fail('Must specify class label with --label when using a conditional network!')
     if class_idx not in range(G.c_dim):
         ctx.fail(f'Your class label can be at most {G.c_dim - 1}!')
     print(f'Using class {class_idx} (available labels: range({G.c_dim - 1})...)')
@@ -382,7 +382,7 @@ resume_specs = {
             # Community models. More can be found at: https://github.com/justinpinkney/awesome-pretrained-stylegan2 by @justinpinkney, but weren't added here
             'minecraft1024': 'https://github.com/jeffheaton/pretrained-gan-minecraft/releases/download/v1/minecraft-gan-2020-12-22.pkl',  # Thanks to @jeffheaton
             'imagenet512':   'https://battle.shawwn.com/sdc/stylegan2-imagenet-512/model.ckpt-533504.pkl',  # Thanks to @shawwn
-            'wikiart1024-C': 'https://archive.org/download/wikiart-stylegan2-conditional-model/WikiArt5.pkl',  # Thanks to @pbaylies; conditional (167 classes in total: --class=0 to 166)
+            'wikiart1024-C': 'https://archive.org/download/wikiart-stylegan2-conditional-model/WikiArt5.pkl',  # Thanks to @pbaylies; conditional (167 classes in total: --label=0 to 166)
             'wikiart1024-U': 'https://archive.org/download/wikiart-stylegan2-conditional-model/WikiArt_Uncond2.pkl',  # Thanks to @pbaylies; unconditional
             'maps1024':      'https://archive.org/download/mapdreamer/mapdreamer.pkl',  # Thanks to @tjukanov
             'fursona512':    'https://thisfursonadoesnotexist.com/model/network-e621-r-512-3194880.pkl',  # Thanks to @arfafax
