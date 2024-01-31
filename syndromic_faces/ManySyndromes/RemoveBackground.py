@@ -28,10 +28,6 @@ parser.add_argument("--verbose", action='store_true', default=False) # skip alre
 args = parser.parse_args()
 
 
-# imagepath = '/data/duongdb/ManyFaceConditions01312022/ExampleSurveyIRB01312022Fake'
-# foutpath = '/data/duongdb/ManyFaceConditions01312022/ExampleSurveyIRB01312022FakeRemoveBg'
-
-
 if not os.path.exists(args.foutpath): 
   os.mkdir (args.foutpath)
 
