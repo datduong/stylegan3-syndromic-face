@@ -130,7 +130,7 @@ class FullyConnectedLayer(torch.nn.Module):
 
 
 @persistence.persistent_class
-class FullyConnectedLayerMultiLabelType(torch.nn.Module): # ! split a joint label combination a,b into 2 embeddings, one for a, one for b. 
+class FullyConnectedLayerMultiLabelType(torch.nn.Module): # ! split a joint label combination a,b,c into 3 embeddings, one for a, one for b, one for c 
     def __init__(self,
         # in_features,                # Number of input features.
         out_features,               # Number of output features.
@@ -139,8 +139,8 @@ class FullyConnectedLayerMultiLabelType(torch.nn.Module): # ! split a joint labe
         lr_multiplier   = 1,        # Learning rate multiplier.
         weight_init     = 1,        # Initial standard deviation of the weight tensor.
         bias_init       = 0,        # Initial value of the additive bias.
-        label_combo_dict = dict(),  # Example: [0-3,3-5], color={blue,red,green} and size={large,small}, then label_combo=2, total unique labels=6. {blue,red,green} takes position 0-3, {large,small} takes position 3-5
-        label_emb_dict = dict()     # {label1:256, label2:128 ...}
+        label_combo_dict = dict(),  # ! Example: [0-3,3-5], color={blue,red,green} and size={large,small}, then label_combo=2, total unique labels=6. {blue,red,green} takes position 0-3, {large,small} takes position 3-5
+        label_emb_dict = dict()     # ! {label1:256, label2:128 ...}
     ):
         super().__init__()
 

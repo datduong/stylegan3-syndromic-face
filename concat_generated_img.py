@@ -39,7 +39,7 @@ LABEL_MAP = {'0':'22q11DS', '1':'Controls', '2':'Normal', '3':'WS'} # WS+22q11DS
 GROUP_MAP = {'4':'2y', '5':'adolescence', '6':'olderadult', '7':'youngadult', '8':'youngchild' }
 
 def GetLabelFromName (foldername): 
-  # ! wants 3,82,8T0.5M1_WSyoungchild_
+  # ! we want format like 3,82,8T0.5M1_WSyoungchild_
   # 3,82,8T0.5M1_WSyoungchild_
   # 3,82,8T0.5M1_WSyoungchild_seed00000021.png
   label1 = LABEL_MAP [ foldername[0] ] # 0,42,4T0.5M.8
