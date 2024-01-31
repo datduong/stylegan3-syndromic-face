@@ -65,6 +65,7 @@ done
 
 
 # ! manual eval show these were best 
+# random seed number is in the middle (e.g., _95_ or _78_), truncation setting is 0.6 or 0.7
 # For Noonan Syndrome: YoungChildGirl_95_0.6, YoungChildBoy_78_0.6, YoungChildGirl_113_0.6, 2yBoy_121_0.6, and YoungChildGirl_126_0.6.
 # For Kabuki: YoungChildGirl_141_0.6, 2yGirl_117_0.7, 2yBoy_38_0.6, 2yGirl_66_0.7, and 2yGirl_60_0.7
 

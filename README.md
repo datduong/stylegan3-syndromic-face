@@ -3,7 +3,7 @@
 
 For more detail, please see our draft [**Generative Artificial Intelligence Methods for Pediatric Genetics Education**](https://www.medrxiv.org/content/10.1101/2023.08.01.23293506v1).
 
-We trained *Nvidia StyleGAN2-ADA (which is supported by StyleGAN3 GitHub, see their original instruction below)* on syndromic faces. The main advantages of StyleGAN3 over StyleGAN2 are rotation and translation manipulations. Since neither of these operations are pertained to our objective, we decided to use StyleGAN2-ADA instead of StyleGAN3. 
+We trained **Nvidia StyleGAN2-ADA (which is supported by StyleGAN3 GitHub, see their original instruction below)** on syndromic faces. The main advantages of StyleGAN3 over StyleGAN2 are rotation and translation manipulations. Since neither of these operations are pertained to our objective, we decided to use StyleGAN2-ADA instead of StyleGAN3. 
 
 **We added the [following lines](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/training/networks_stylegan2.py#L133) to handle multiple types of labels.**
 
@@ -24,11 +24,15 @@ We measure the effectiveness of GAN images and GAN-transformation at helping med
 
 ## Instruction and dataset 
 
-All images were collected via online search; however, due to copyright issues, we cannot freely redistribute these images. Please contact us for the dataset. 
+All images were collected via online search; however, due to redistribution copyright issues, we cannot freely redistribute these images. Please contact us for the dataset. 
 
 **This is the [training script](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/syndromic_faces/make_training_script.py)**
 
-However, you do not have to train the model. **You can download our model here.**
+However, you do not have to train the model. You can download our model here. 
+
+You do not need to train the model. **You can download our model here.** Then, follow this **[script to generate the images](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/syndromic_faces/generate_disease_transformation.sh)**. The script also generates transformation between the unaffected condition into a syndromic condition. 
+
+In the script, please change the directory path into your own machine. We generated many images, and then handpicked those that looked the most reasonable. We reported the [random seeds and settings to get these images here](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/syndromic_faces/generate_disease_transformation.sh#L67). You should see output like the ones below, and feel free to contact us if you have any problem. 
 
 
 
