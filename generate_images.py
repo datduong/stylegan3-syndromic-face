@@ -140,7 +140,7 @@ def generate_images(
         class_idx = [int(s.strip()) for s in class_idx.split(',')]
         label[:, class_idx] = 1
         
-        # ! 
+        # ! interpolate between labels. 
         if class_idx_next is not None: 
             class_idx_next = [int(s.strip()) for s in class_idx_next.split(',')]
             label_next = torch.zeros([1, G.c_dim], device=device)
