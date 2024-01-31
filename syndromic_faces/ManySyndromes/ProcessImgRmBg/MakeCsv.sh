@@ -12,7 +12,7 @@ module load gcc/8.3.0
 # ---------------------------------------------------------------------------- #
 # ! make csv 
 datapath=/data/duongdb/ManyFaceConditions08172022/
-codepath=$datadir/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+codepath=$datadir/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 extracsv=/data/duongdb/WS22qOther_12082021/train+testWS22qOther10kNormalGenderNpr0.csv # ! add more images, have to call normal in @ManyCondition+10kNormal.csv even if we don't use normal
 cd $codepath
 python3 MakeCsv.py --filelist 'BWS.csv,CdLS.csv,Down.csv,KS.csv,NS.csv,PWS.csv,RSTS1.csv,WHS.csv,Unaffected.csv' --outputname $datapath/'ManyCondition+10kNormal.csv' --imagepath $datapath/Align1024RmBgCenter --extracsv $extracsv --headfolder '/data/duongdb/ManyFaceConditions08172022'
@@ -21,7 +21,7 @@ python3 MakeCsv.py --filelist 'BWS.csv,CdLS.csv,Down.csv,KS.csv,NS.csv,PWS.csv,R
 # ---------------------------------------------------------------------------- #
 # ! make csv not adding in normal "free on internet" faces 
 datapath=/data/duongdb/ManyFaceConditions08172022/
-codepath=$datadir/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+codepath=$datadir/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 
 cd $codepath
 python3 MakeCsv.py --filelist 'BWS.csv,CdLS.csv,Down.csv,KS.csv,NS.csv,PWS.csv,RSTS1.csv,WHS.csv,Unaffected.csv,22q11DS.csv,WS.csv' --outputname $datapath/'ManualMetaDataLabel.csv' --imagepath $datapath/TrimImg_no_bg_0pix_align --headfolder '/data/duongdb/ManyFaceConditions08172022'
@@ -31,7 +31,7 @@ python3 MakeCsv.py --filelist 'BWS.csv,CdLS.csv,Down.csv,KS.csv,NS.csv,PWS.csv,R
 # ---------------------------------------------------------------------------- #
 # ! make json 
 datapath=/data/duongdb/ManyFaceConditions08172022/
-codepath=$datadir/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+codepath=$datadir/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 experimentname=ManyCondition-Normal-Other # -SkipAge-SkipGender
 json_path=$datapath/$experimentname.json
@@ -65,7 +65,7 @@ do
   img_csv=$datapath/ManyFaceConditions08172022/$csvjsonbasename.csv
   meta_fname=$datapath/ManyFaceConditions08172022/$csvjsonbasename.json
 
-  cd /data/duongdb/stylegan3-FaceSyndromes
+  cd /data/duongdb/stylegan3-syndromic-faces
   python dataset_tool.py --source $source_in --dest $dest_folder --resolution=$resolution'x'$resolution --img-csv $img_csv --meta-fname $meta_fname --upsample-label-dict '{"22q11DS":1, "BWS":4, "CdLS":4, "Down":4, "KS":4, "NS":4, "PWS":4, "RSTS1":4, "Unaffected":4, "WHS":4, "WS":1}'
 
   # '{"22q11DS":1, "BWS":4, "CdLS":4, "Down":4, "KS":4, "NS":4, "PWS":4, "RSTS1":4, "Unaffected":4, "WHS":4, "WS":1}'
@@ -82,7 +82,7 @@ cd $dest_folder
 # ! make json from given csv 
 
 datapath=/data/duongdb/ManyFaceConditions08172022/
-codepath=$datadir/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+codepath=$datadir/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 experimentname=AlignPix255-NoExternal-Bg # -SkipAge-SkipGender
 json_path=$datapath/$experimentname.json
@@ -106,7 +106,7 @@ do
   img_csv=$datapath/ManyFaceConditions08172022/$csvjsonbasename.csv
   meta_fname=$datapath/ManyFaceConditions08172022/$csvjsonbasename.json
 
-  cd /data/duongdb/stylegan3-FaceSyndromes
+  cd /data/duongdb/stylegan3-syndromic-faces
   python dataset_tool.py --source $source_in --dest $dest_folder --resolution=$resolution'x'$resolution --img-csv $img_csv --meta-fname $meta_fname --upsample-label-dict '{"22q11DS":1, "BWS":1, "CdLS":3, "Down":1, "KS":2, "NS":2, "PWS":4, "RSTS1":4, "Unaffected":3, "WHS":2, "WS":1}'
 
 done 

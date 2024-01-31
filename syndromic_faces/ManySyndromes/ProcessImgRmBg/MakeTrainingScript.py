@@ -27,7 +27,7 @@ outdir=$datapath/Stylegan3Model/OUT_FOLDER
 # ! note, loading models: https://github.com/NVlabs/stylegan3/issues/23#issuecomment-970706600
 # ! https://catalog.ngc.nvidia.com/orgs/nvidia/teams/research/models/stylegan3/files
 
-nvidia_pretrain=/data/duongdb/stylegan3-FaceSyndromes/NvidiaPretrainedModel/stylegan2-ffhq-256x256.pkl
+nvidia_pretrain=/data/duongdb/stylegan3-syndromic-faces/NvidiaPretrainedModel/stylegan2-ffhq-256x256.pkl
 
 # ---------------------------------------------------------------------------- #
 
@@ -39,7 +39,7 @@ nvidia_pretrain=/data/duongdb/stylegan3-FaceSyndromes/NvidiaPretrainedModel/styl
 
 # ! train 
 
-cd /data/duongdb/stylegan3-FaceSyndromes
+cd /data/duongdb/stylegan3-syndromic-faces
 
 python train.py --outdir=$outdir --data=$img_folder \
 --resume=$nvidia_pretrain \

@@ -13,7 +13,7 @@ module load gcc/8.3.0
 # ! generate images, using labels indexing
 # ! let's try same random vector, but different label class
 
-cd /data/duongdb/stylegan3-FaceSyndromes
+cd /data/duongdb/stylegan3-syndromic-faces
 
 truncationpsi=0.6 # @trunc=0.7 is recommended on their face dataset. 
 

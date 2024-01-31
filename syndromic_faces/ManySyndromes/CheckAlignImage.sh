@@ -28,7 +28,7 @@ module load gcc/8.3.0
 # headfolder=/data/duongdb/ManyFaceConditions04202022
 # outfolder_name=$headfolder/TrimImg # ! all images will be in same folder, we need to run the @extract_code 
 # mkdir $outfolder_name
-# codepath=/data/duongdb/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+# codepath=/data/duongdb/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 # cd $codepath
 # for type in 22q11DS BWS CdLS Down KS NS PWS RSTS1 WHS Unaffected WS  
 # do 
@@ -42,7 +42,7 @@ module load gcc/8.3.0
 
 resolution=720
 
-codepath=/data/duongdb/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+codepath=/data/duongdb/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 
 headfolder=/data/duongdb/ManyFaceConditions04202022

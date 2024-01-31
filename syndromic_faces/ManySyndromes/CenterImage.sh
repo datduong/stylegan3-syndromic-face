@@ -21,7 +21,7 @@ done
 headfolder=/data/duongdb/ManyFaceConditions01312022
 mkdir $headfolder/TrimImg # ! all images will be in same folder, we need to run the @extract_code 
 outfolder_name=/data/duongdb/ManyFaceConditions01312022/TrimImg
-codepath=$datadir/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+codepath=$datadir/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 for type in KS # Unaffected # BWS CdLS Down KS NS PWS RSTS1 WHS 
 do 
@@ -35,7 +35,7 @@ cd $headfolder/TrimImg
 headfolder=/data/duongdb/ManyFaceConditions01312022
 mkdir $headfolder/TrimImgQualtricExample # ! all images will be in same folder, we need to run the @extract_code 
 outfolder_name=/data/duongdb/ManyFaceConditions01312022/TrimImgQualtricExample
-codepath=$datadir/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+codepath=$datadir/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 for type in ExampleSurveyIRB01312022 
 do 
@@ -46,7 +46,7 @@ cd $headfolder/TrimImgExampleSurveyIRB01312022
 
 resolution=512
 datapath=/data/duongdb/ManyFaceConditions01312022/
-codepath=$datadir/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+codepath=$datadir/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 python3 AlignImage.py --input_file_path $datapath/TrimImgExampleSurveyIRB01312022 --output_file_path $datapath/Align$resolution'ExampleSurveyIRB01312022' --output_size $resolution --centerface '0,0,512,512' --notblur > $codepath/ExampleSurveyIRB01312022.txt # --whitebackground
 
@@ -55,7 +55,7 @@ python3 AlignImage.py --input_file_path $datapath/TrimImgExampleSurveyIRB0131202
 # ! align images into ffhq format # this has to be done so we can greatly leverage transfer-ability of ffhq
 resolution=512
 datapath=/data/duongdb/ManyFaceConditions01312022/
-codepath=$datadir/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+codepath=$datadir/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 python3 AlignImage.py --input_file_path $datapath/TrimImg --output_file_path $datapath/Align$resolution'Center' --output_size $resolution --centerface '0,0,512,512' --notblur > $codepath/align_log_background_many_conditions.txt
 # '50,50,974,974'
@@ -66,7 +66,7 @@ python3 RemoveBackground.py --imagepath $datapath/Align$resolution'Center' --fou
 # ! need to realign WS and 22q? remove background of WS and 22q? 
 resolution=1024
 datapath=/data/duongdb/ManyFaceConditions01312022/
-codepath=$datadir/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+codepath=$datadir/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 python3 AlignImage.py --input_file_path $datapath/TrimImg --output_file_path $datapath/Align$resolution'BlankBackgroundCenter' --output_size $resolution --centerface '50,50,974,974' --notblur > $codepath/align_log_background_many_conditions.txt
 # '50,50,974,974'
@@ -76,7 +76,7 @@ python3 RemoveBackground.py --imagepath $datapath/Align$resolution'BlankBackgrou
 
 # ! make csv 
 datapath=/data/duongdb/ManyFaceConditions01312022/
-codepath=$datadir/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+codepath=$datadir/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 extracsv=/data/duongdb/WS22qOther_12082021/WS22qOther10kNormalGenderNpr0.csv # ! add more images 
 cd $codepath
 python3 MakeCsv.py --outputname $datapath/'ManyCondition+10kNormal.csv' --imagepath $datapath/Align1024BlankBackgroundCenter --extracsv $extracsv --headfolder '/data/duongdb/ManyFaceConditions01312022'
@@ -85,7 +85,7 @@ python3 MakeCsv.py --outputname $datapath/'ManyCondition+10kNormal.csv' --imagep
 
 # ! make json 
 datapath=/data/duongdb/ManyFaceConditions01312022/
-codepath=$datadir/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+codepath=$datadir/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 experimentname=ManyCondition+10kNormal-Other
 json_path=$datapath/$experimentname.json
@@ -96,7 +96,7 @@ python3 MakeLabelJson.py --json_path $json_path --csv_label $csv_label --disease
 
 # ! make json + skip age, disease label only 
 datapath=/data/duongdb/ManyFaceConditions01312022/
-codepath=$datadir/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+codepath=$datadir/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 experimentname=ManyCondition+10kNormal-Other-SkipAge-SkipGender
 json_path=$datapath/$experimentname.json
@@ -113,7 +113,7 @@ python3 MakeLabelJson.py --json_path $json_path --csv_label $csv_label --disease
 # 
 # ! make json ... skip normal 
 datapath=/data/duongdb/ManyFaceConditions01312022/
-codepath=$datadir/stylegan3-FaceSyndromes/syndromic_faces/ManySyndromes # ! 
+codepath=$datadir/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
 cd $codepath
 experimentname=ManyCondition-Normal-Other
 json_path=$datapath/$experimentname.json
@@ -144,7 +144,7 @@ do
   img_csv=$datapath/ManyFaceConditions01312022/$csvjsonbasename.csv
   meta_fname=$datapath/ManyFaceConditions01312022/$csvjsonbasename.json
 
-  cd /data/duongdb/stylegan3-FaceSyndromes
+  cd /data/duongdb/stylegan3-syndromic-faces
   python dataset_tool.py --source $source_in --dest $dest_folder --resolution=$resolution'x'$resolution --img-csv $img_csv --meta-fname $meta_fname --upsample-label-dict '{"22q11DS":2, "BWS":10, "CdLS":10, "Down":10, "KS":10, "NS":10, "PWS":10, "RSTS1":10, "WHS":10, "WS":2}'
 
   # '{"22q11DS":1, "BWS":4, "CdLS":4, "Down":4, "KS":4, "NS":4, "PWS":4, "RSTS1":4, "WHS":4, "WS":1}'
@@ -173,7 +173,7 @@ do
   # img_csv=$datapath/ManyFaceConditions01312022/$csvjsonbasename.csv
   # meta_fname=$datapath/ManyFaceConditions01312022/$csvjsonbasename.json
 
-  cd /data/duongdb/stylegan3-FaceSyndromes
+  cd /data/duongdb/stylegan3-syndromic-faces
   python dataset_tool.py --source $source_in --dest $dest_folder --resolution=$resolution'x'$resolution 
 
   # '{"22q11DS":1, "BWS":4, "CdLS":4, "Down":4, "KS":4, "NS":4, "PWS":4, "RSTS1":4, "WHS":4, "WS":1}'
