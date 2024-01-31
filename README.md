@@ -5,7 +5,7 @@ For more detail, please see our draft [**Generative Artificial Intelligence Meth
 
 We trained *Nvidia StyleGAN2-ADA (which is supported by StyleGAN3 GitHub, see their original instruction below)* on syndromic faces. The main advantages of StyleGAN3 over StyleGAN2 are rotation and translation manipulations. Since neither of these operations are pertained to our objective, we decided to use StyleGAN2-ADA instead of StyleGAN3. 
 
-*We added the [following lines](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/training/networks_stylegan2.py#L133) to handle multiple types of labels*.
+**We added the [following lines](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/training/networks_stylegan2.py#L133) to handle multiple types of labels.**
 
 ## Surveys sent to medical students
 
@@ -26,9 +26,9 @@ We measure the effectiveness of GAN images and GAN-transformation at helping med
 
 All images were collected via online search; however, due to copyright issues, we cannot freely redistribute these images. Please contact us for the dataset. 
 
-### Training script
+**This is the [training script](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/syndromic_faces/make_training_script.py)**
 
-
+However, you do not have to train the model. **You can download our model here.**
 
 
 
