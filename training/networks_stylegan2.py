@@ -130,7 +130,10 @@ class FullyConnectedLayer(torch.nn.Module):
 
 
 @persistence.persistent_class
-class FullyConnectedLayerMultiLabelType(torch.nn.Module): # ! split a joint label combination a,b,c into 3 embeddings, one for a, one for b, one for c 
+class FullyConnectedLayerMultiLabelType(torch.nn.Module): 
+    # ! this code is added to handle multiple types of labels that will together make up a complete label of one input image
+    # ! for example, an input image have the following labels disease age, gender together as one single label embedding. 
+    # ! key point is: have a joint label combination a,b,c; for example, 3 embeddings --> 1 larger embedding 
     def __init__(self,
         # in_features,                # Number of input features.
         out_features,               # Number of output features.
