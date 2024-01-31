@@ -36,7 +36,7 @@ do
 
         model=/data/duongdb/WS22qOther_12082021/Stylegan3Model/$modelname
 
-        python3 gen_images.py --outdir=$outdir/$class'T'$truncationpsi'Static' --trunc=$truncationpsi --seeds=0-200 --class=$class --network $model 
+        python3 generate_images.py --outdir=$outdir/$class'T'$truncationpsi'Static' --trunc=$truncationpsi --seeds=0-200 --class=$class --network $model 
 
       done 
     done 

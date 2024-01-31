@@ -53,7 +53,7 @@ do
 
         for mix_ratio in .75 .5 .25 1 0 # .75 .5 .25
         do 
-          python3 gen_images.py --outdir=$outdir/$class$class_next'T'$truncationpsi'M'$mix_ratio --trunc=$truncationpsi --seeds=0-150 --class=$class --class-next=$class_next --network $model --mix-ratio $mix_ratio
+          python3 generate_images.py --outdir=$outdir/$class$class_next'T'$truncationpsi'M'$mix_ratio --trunc=$truncationpsi --seeds=0-150 --class=$class --class-next=$class_next --network $model --mix-ratio $mix_ratio
         done 
 
         python3 concat_generated_img.py --path $outdir --folder_prefix $class$class_next'T'$truncationpsi --interval '1 .75 .5 .25 0' --seed_range '0,150'

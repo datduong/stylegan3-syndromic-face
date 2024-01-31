@@ -115,12 +115,12 @@ def generate_images(
 
     \b
     # Generate an image using pre-trained AFHQv2 model ("Ours" in Figure 1, left).
-    python gen_images.py --outdir=out --trunc=1 --seeds=2 \\
+    python generate_images.py --outdir=out --trunc=1 --seeds=2 \\
         --network=https://api.ngc.nvidia.com/v2/models/nvidia/research/stylegan3/versions/1/files/stylegan3-r-afhqv2-512x512.pkl
 
     \b
     # Generate uncurated images with truncation using the MetFaces-U dataset
-    python gen_images.py --outdir=out --trunc=0.7 --seeds=600-605 \\
+    python generate_images.py --outdir=out --trunc=0.7 --seeds=600-605 \\
         --network=https://api.ngc.nvidia.com/v2/models/nvidia/research/stylegan3/versions/1/files/stylegan3-t-metfacesu-1024x1024.pkl
     """
 

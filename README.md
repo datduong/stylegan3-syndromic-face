@@ -108,7 +108,7 @@ Pre-trained networks are stored as `*.pkl` files that can be referenced using lo
 
 ```.bash
 # Generate an image using pre-trained AFHQv2 model ("Ours" in Figure 1, left).
-python gen_images.py --outdir=out --trunc=1 --seeds=2 \
+python generate_images.py --outdir=out --trunc=1 --seeds=2 \
     --network=https://api.ngc.nvidia.com/v2/models/nvidia/research/stylegan3/versions/1/files/stylegan3-r-afhqv2-512x512.pkl
 
 # Render a 4x2 grid of interpolations for seeds 0 through 31.
@@ -124,11 +124,11 @@ Outputs from the above commands are placed under `out/*.png`, controlled by `--o
 # Build the stylegan3:latest image
 docker build --tag stylegan3 .
 
-# Run the gen_images.py script using Docker:
+# Run the generate_images.py script using Docker:
 docker run --gpus all -it --rm --user $(id -u):$(id -g) \
     -v `pwd`:/scratch --workdir /scratch -e HOME=/scratch \
     stylegan3 \
-    python gen_images.py --outdir=out --trunc=1 --seeds=2 \
+    python generate_images.py --outdir=out --trunc=1 --seeds=2 \
          --network=https://api.ngc.nvidia.com/v2/models/nvidia/research/stylegan3/versions/1/files/stylegan3-r-afhqv2-512x512.pkl
 ```
 
@@ -173,7 +173,7 @@ w = G.mapping(z, c, truncation_psi=0.5, truncation_cutoff=8)
 img = G.synthesis(w, noise_mode='const', force_fp32=True)
 ```
 
-Please refer to [`gen_images.py`](./gen_images.py) for complete code example.
+Please refer to [`generate_images.py`](./generate_images.py) for complete code example.
 
 ## Preparing datasets
 

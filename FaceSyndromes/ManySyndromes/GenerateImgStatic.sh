@@ -41,7 +41,7 @@ do
 
         model=/data/duongdb/ManyFaceConditions01312022/Stylegan3Model/$modelname
 
-        python3 gen_images.py --outdir=$outdir/$class'T'$truncationpsi'Static' --trunc=$truncationpsi --seeds=0-50 --class=$class --network $model 
+        python3 generate_images.py --outdir=$outdir/$class'T'$truncationpsi'Static' --trunc=$truncationpsi --seeds=0-50 --class=$class --network $model 
 
       done 
     done 
