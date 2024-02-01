@@ -28,7 +28,7 @@ All images were collected via online search; however, due to redistribution copy
 
 **This is the [training script](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/syndromic_faces/make_training_script.py).** However, you do not need to train the model. **You can download our model here.** 
 
-Then, follow this **[script to generate the images](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/syndromic_faces/generate_disease_transformation.sh)**. The script also generates transformation between the unaffected condition into a syndromic condition. 
+Then, follow this **[script to generate the images](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/syndromic_faces/generate_disease_transformation.sh)**. The script also generates transformation of an unaffected face image into a syndromic condition. 
 
 In the script, please change the directory path into your own machine. We generated many images, and then handpicked those that looked the most reasonable. We reported the [random seeds and settings to get these images here](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/syndromic_faces/generate_disease_transformation.sh#L67). You should see output like the ones below, and feel free to contact us if you have any problem. 
 
