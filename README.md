@@ -24,7 +24,7 @@ We measure the effectiveness of GAN images and GAN-transformation at helping med
 
 All images were collected via online search; however, due to redistribution copyright issues, we cannot freely redistribute these images. Please contact us for the dataset. 
 
-**This is the [training script](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/syndromic_faces/make_training_script.py).** However, you do not need to train the model. **You can download our model here.** 
+**This is the [training script](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/syndromic_faces/make_training_script.py).** However, you do not need to train the model. **[You can download our model here.](https://drive.google.com/drive/folders/1p8rRYYuA8y75dWbrvySIJ9e5Y1OI7zVB?usp=drive_link)** 
 
 Then, follow this **[script to generate the images](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/syndromic_faces/generate_disease_transformation.sh)**. The script also generates transformation of an unaffected face image into a syndromic condition. 
 
