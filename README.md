@@ -41,6 +41,7 @@ In the script, please change the directory path into your own machine. We genera
 
 <br />
 <br />
+<br />
 
 
 ## Below is the original description from Nvidia StyleGAN3
