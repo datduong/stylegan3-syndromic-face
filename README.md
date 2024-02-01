@@ -33,6 +33,16 @@ Then, follow this **[script to generate the images](https://github.com/datduong/
 In the script, please change the directory path into your own machine. We generated many images, and then handpicked those that looked the most reasonable. We reported the [random seeds and settings to get these images here](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/syndromic_faces/generate_disease_transformation.sh#L67). You should see output like the ones below, and feel free to contact us if you have any problem. 
 
 
+<br />
+
+* Transformation of an unaffected face image into Kabuki Syndrome. 
+
+<div>
+    <img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00000017F0C0%2C4C1%2C4M0.55T0.622q11DS2y.png" width="100%">
+</div>
+
+<br />
+<br />
 
 
 ## Below is the original description from Nvidia StyleGAN3
