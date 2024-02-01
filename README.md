@@ -7,7 +7,7 @@ We trained **Nvidia StyleGAN2-ADA (which is supported by StyleGAN3 GitHub, see t
 
 ## Surveys sent to medical students
 
-We measure the effectiveness of GAN images and GAN-transformation at helping medical students recognizing Kabuki and Noonan syndromes. The survey sent out are:
+We measure the effectiveness of GAN images and GAN-transformation at helping medical students recognizing Kabuki and Noonan syndromes. The surveys sent out are:
 
 - [Kabuki test images with only text description of the disease](https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:4e845dd6-431f-4da4-8ded-0edadfd4cf6a)
 - [Kabuki test images with text description and 5 real images of the disease](https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:94d8c31c-1033-46fb-8317-27636b0b959f)
