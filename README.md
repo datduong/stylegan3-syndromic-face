@@ -1,8 +1,6 @@
 
 ## StyleGAN2-ADA on syndromic faces 
 
-For more detail, please see our draft [**Generative Artificial Intelligence Methods for Pediatric Genetics Education**](https://www.medrxiv.org/content/10.1101/2023.08.01.23293506v1).
-
 We trained **Nvidia StyleGAN2-ADA (which is supported by StyleGAN3 GitHub, see their original instruction below)** on syndromic faces. The main advantages of StyleGAN3 over StyleGAN2 are rotation and translation manipulations. Since neither of these operations are pertained to our objective, we decided to use StyleGAN2-ADA instead of StyleGAN3. 
 
 **We added the [following lines](https://github.com/datduong/stylegan3-syndromic-faces/blob/master/training/networks_stylegan2.py#L133) to handle multiple types of labels.**
