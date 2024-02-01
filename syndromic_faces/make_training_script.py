@@ -16,11 +16,11 @@ module load gcc/8.3.0
 
 # ---------------------------------------------------------------------------- #
 
-datapath=/data/duongdb/ManyFaceConditions08172022
+datapath=/data/duongdb/syndromic-faces-workdir
 
 img_folder=$datapath/IMG_FOLDER
 
-outdir=$datapath/Stylegan3Model/OUT_FOLDER
+outdir=$datapath/GAN_output_dir/OUT_FOLDER
 
 # ---------------------------------------------------------------------------- #
 
@@ -60,7 +60,7 @@ python train.py --outdir=$outdir --data=$img_folder \
 now = datetime.now() # current date and time
 date_time = now.strftime("%m%d%Y%H%M%S")
 
-os.chdir('/data/duongdb/ManyFaceConditions08172022')
+os.chdir('/data/duongdb/syndromic-faces-workdir')
 
 IMG_FOLDER = 'Res256AlignPix0-NoExternalUp1-4' # ! input folder: image resolution 256x256, aligned, no background (pix_val=0 for background), no external data added to our own datasets, increase weight of rarer diseases to. 
  

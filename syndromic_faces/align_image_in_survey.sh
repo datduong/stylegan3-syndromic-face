@@ -15,7 +15,7 @@ resolution=720
 
 codepath=/data/duongdb/stylegan3-syndromic-faces/syndromic_faces/ # ! 
 
-headfolder=/data/duongdb/ManyFaceConditions08172022/SurveyImgAlign
+headfolder=/data/duongdb/syndromic-faces-workdir/SurveyImgAlign
 img_path=$headfolder/Noonan
 
 colorcode=0

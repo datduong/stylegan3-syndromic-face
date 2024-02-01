@@ -43,10 +43,10 @@ do
       # ! download from provided link
       modelname=Res256AlignPix0-NoExternalUp1-4/00001-stylegan2-Res256AlignPix0-NoExternalUp1-4-gpus4-batch64-gamma0.2048-multilabel/network-snapshot-001209.pkl 
       
-      outdir=/data/duongdb/ManyFaceConditions08172022/Stylegan3Model/$modelname'Interpolate'
+      outdir=/data/duongdb/syndromic-faces-workdir/GAN_output_dir/$modelname'Interpolate'
       mkdir $outdir
 
-      model=/data/duongdb/ManyFaceConditions08172022/Stylegan3Model/$modelname
+      model=/data/duongdb/syndromic-faces-workdir/GAN_output_dir/$modelname
 
       # @mix_ratio tells us how much do we want to morph label label x into y. 
       # ! this step will produce static images without transformation at mix_ratio=0 and mix_ratio=1
