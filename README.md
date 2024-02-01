@@ -38,7 +38,7 @@ In the script, please change the directory path into your own machine. We genera
 * Transformation of an unaffected face image into Kabuki Syndrome. 
 
 <div>
-    <img src="https://github.com/datduong/stylegan2-ada-Ws-22q/blob/master/ExampleImgs/seed00000017F0C0%2C4C1%2C4M0.55T0.622q11DS2y.png" width="100%">
+    <img src="https://github.com/datduong/stylegan3-syndromic-faces/blob/master/examples/seed0141.png" width="100%">
 </div>
 
 <br />
