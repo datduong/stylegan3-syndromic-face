@@ -26,12 +26,12 @@ module load gcc/8.3.0
 headfolder=/data/duongdb/ManyFaceConditions12012022
 outfolder_name=$headfolder/TrimImg # ! all images will be in same folder, we need to run the @extract_code 
 mkdir $outfolder_name
-codepath=/data/duongdb/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
+codepath=/data/duongdb/stylegan3-syndromic-faces/syndromic_faces/ # ! 
 cd $codepath
 for type in 22q11DS BWS CdLS Down KS NS PWS RSTS1 WHS Unaffected WS  
 do 
   datapath=$headfolder/$type
-  python3 CropWhiteSpace.py --folder_name $datapath --padding 0 --outformat png --label $type --outfolder_name $outfolder_name > $type'trim_log.txt' # ! @png is probably best for ffhq 
+  python3 crop_white_space.py --folder_name $datapath --padding 0 --outformat png --label $type --outfolder_name $outfolder_name > $type'trim_log.txt' # ! @png is probably best for ffhq 
 done 
 cd $outfolder_name
 
@@ -40,7 +40,7 @@ cd $outfolder_name
 
 resolution=720
 
-codepath=/data/duongdb/stylegan3-syndromic-faces/syndromic_faces/ManySyndromes # ! 
+codepath=/data/duongdb/stylegan3-syndromic-faces/syndromic_faces/ # ! 
 cd $codepath
 
 headfolder=/data/duongdb/ManyFaceConditions12012022
@@ -52,10 +52,10 @@ foutpath=$headfolder/TrimImg_no_bg_$colorcode'pix'_$resolution'rs'
 foutpath2=$foutpath'_align'
 
 # ! remove background 
-python3 RemoveBackground.py --imagepath $img_path --foutpath $foutpath --colorcode $colorcode # ! set background pixel=0 a
+python3 remove_background.py --imagepath $img_path --foutpath $foutpath --colorcode $colorcode # ! set background pixel=0 a
 
 # ! align
-python3 AlignImage.py --input_file_path $foutpath --output_file_path $foutpath2 --output_size $resolution --centerface '0,0,720,720' --colorcode $colorcode --notblur --enable_padding
+python3 align_image.py --input_file_path $foutpath --output_file_path $foutpath2 --output_size $resolution --centerface '0,0,720,720' --colorcode $colorcode --notblur --enable_padding
 
 cd $foutpath
 
