@@ -35,7 +35,7 @@ In the script, please change the directory path into your own machine. We genera
 
 <br />
 
-* Example showing a transformation of an AI-generated unaffected face image into Kabuki Syndrome. 
+* Example showing a transformation of an GAN-generated unaffected face image into Kabuki Syndrome. 
 
 <div>
     <img src="https://github.com/datduong/stylegan3-syndromic-faces/blob/master/examples/seed0141.png" width="100%">
